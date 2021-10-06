@@ -12,4 +12,9 @@ public class LazyInitializedSingleton {
     public static LazyInitializedSingleton getInstance() {
         return instance == null ? instance = new LazyInitializedSingleton() : instance;
     }
+
+    @Override
+    public String toString() {
+        return this.getClass().getName() + "@" + this.hashCode();
+    }
 }
